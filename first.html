@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruit Fista</title>
+
+<style>
+    body {
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background: url('https://images.unsplash.com/photo-1574226516831-e1dff420e12e?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Gradient overlay */
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(46, 204, 113, 0.5);
+        z-index: 1;
+    }
+
+    /* Button container in center */
+    .button-container {
+        position: relative;
+        z-index: 5; /* above fruits */
+        text-align: center;
+    }
+
+    /* Enter button styling */
+    .enter-btn {
+        padding: 20px 50px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        background: linear-gradient(135deg, #ff6b6b, #feca57);
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .enter-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+    }
+
+    /* Floating fruits animation */
+    @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(15deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    .floating-fruit {
+        position: absolute;
+        width: 60px;
+        animation: float 4s ease-in-out infinite;
+        z-index: 2;
+        pointer-events: none; /* do not block button clicks */
+    }
+
+    /* Avoid center (button area) by positioning fruits only at edges */
+    .fruit1 { top: 5%; left: 5%; animation-delay: 0s; }
+    .fruit2 { top: 10%; right: 10%; animation-delay: 1s; }
+    .fruit3 { top: 25%; left: 20%; animation-delay: 2s; }
+    .fruit4 { top: 40%; right: 5%; animation-delay: 3s; }
+    .fruit5 { bottom: 10%; left: 10%; animation-delay: 1.5s; }
+    .fruit6 { bottom: 15%; right: 20%; animation-delay: 2.5s; }
+    .fruit7 { top: 60%; left: 5%; animation-delay: 0.5s; }
+    .fruit8 { bottom: 30%; left: 60%; animation-delay: 1s; }
+    .fruit9 { top: 70%; right: 35%; animation-delay: 2s; }
+    .fruit10 { bottom: 5%; right: 60%; animation-delay: 3.5s; }
+</style>
+</head>
+<body>
+
+<!-- 10 floating fruits -->
+<img src="https://img.icons8.com/color/96/apple.png" class="floating-fruit fruit1" alt="apple">
+<img src="https://img.icons8.com/color/96/banana.png" class="floating-fruit fruit2" alt="banana">
+<img src="https://img.icons8.com/color/96/strawberry.png" class="floating-fruit fruit3" alt="strawberry">
+<img src="https://img.icons8.com/color/96/pineapple.png" class="floating-fruit fruit4" alt="pineapple">
+<img src="https://img.icons8.com/color/96/grapes.png" class="floating-fruit fruit5" alt="grapes">
+<img src="https://img.icons8.com/color/96/cherry.png" class="floating-fruit fruit6" alt="cherry">
+<img src="https://img.icons8.com/color/96/watermelon.png" class="floating-fruit fruit7" alt="watermelon">
+<img src="https://img.icons8.com/color/96/orange.png" class="floating-fruit fruit8" alt="orange">
+<img src="https://img.icons8.com/color/96/kiwi.png" class="floating-fruit fruit9" alt="kiwi">
+<img src="https://img.icons8.com/color/96/mango.png" class="floating-fruit fruit10" alt="mango">
+
+<!-- Button container to keep button above fruits -->
+<div class="button-container">
+    <button class="enter-btn" onclick="enterApp()">
+        🍉 Enter Fruit Fista
+    </button>
+</div>
+
+<script>
+    function enterApp() {
+        window.location.href = "map.html";
+    }
+</script>
+
+</body>
+</html>
