@@ -1,0 +1,37 @@
+                 +------------------------+
+                 |      User Interface    |
+                 |------------------------|
+                 | - HTML: structure      |
+                 | - CSS: styling & anim. |
+                 | - JS: interactivity    |
+                 +-----------+------------+
+                             |
+                             v
+                 +------------------------+
+                 |       JavaScript       |
+                 |------------------------|
+                 | - Shop list rendering  |
+                 | - Admin panel handling |
+                 | - Dynamic fruit rows   |
+                 | - Search/filter        |
+                 +-----------+------------+
+                             |
+        +--------------------+---------------------+
+        |                                          |
+        v                                          v
++--------------------+                    +--------------------+
+|     Map Layer      |                    |       Data         |
+|--------------------|                    |--------------------|
+| - Leaflet.js       |                    | - Sample shops JS  |
+| - OpenStreetMap    |                    | - Fruits + Prices  |
+| - Markers & Popups |                    +--------------------+
++--------------------+
+        |
+        v
++--------------------+
+| User Interaction   |
+|--------------------|
+| - Admin panel      |
+| - Geolocation API  |
+| - Search box       |
++--------------------+
